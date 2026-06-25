@@ -113,66 +113,6 @@
 }
 
 
-/* 나무위키식 수동 목차 */
-.wiki-toc {
-  width: 260px;
-  border: 1px solid #ccc;
-  background: transparent;
-  color: var(--dark);
-  font-size: 14px;
-  line-height: 1.55;
-  padding: 14px 16px;
-  box-sizing: border-box;
-}
-
-.wiki-toc-title {
-  margin: 0 0 10px;
-  padding: 0;
-  border: none !important;
-  font-size: 20px;
-  font-weight: 400;
-  color: var(--dark);
-}
-
-.wiki-toc ol {
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-  counter-reset: item;
-}
-
-.wiki-toc li {
-  margin: 3px 0;
-  counter-increment: item;
-  color: var(--dark);
-  font-weight: 400;
-}
-
-.wiki-toc li::before {
-  content: counters(item, ".") ". ";
-  color: #0275d8;
-}
-
-.wiki-toc ol ol {
-  margin-left: 1.35rem;
-}
-
-.wiki-toc a {
-  color: var(--dark) !important;
-  background: none !important;
-  padding: 0 !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  font-weight: 400 !important;
-  text-decoration: none;
-}
-
-.wiki-toc a:hover {
-  color: #0275d8 !important;
-  text-decoration: underline;
-}
-
 /* 목차와 프로필 간격 */
 .wiki-top-layout {
   gap: 3rem;
@@ -456,45 +396,47 @@ article h4 {
 
 /* 목차 전체: 나무위키식으로 더 촘촘하게 */
 .wiki-toc {
-  text-align: left !important;
-  font-stretch: condensed;
-  transform-origin: top left;
+  width: 260px;
+  border: 1px solid #ccc;
+  background: transparent;
+  padding: 14px 16px;
+  box-sizing: border-box;
 }
 
 .wiki-toc-title {
-  color: #222 !important;
+  margin: 0 0 8px;
+  color: var(--dark);
+  font-weight: 400;
+}
+
+.wiki-toc .toc-line {
+  display: block;
+  margin: 3px 0;
+  color: var(--dark) !important;
+  text-decoration: none;
   font-weight: 400 !important;
-  margin-bottom: 0.45rem !important;
+  background: none !important;
+  box-shadow: none !important;
 }
 
-/* 목차 번호/글자 90% 느낌 */
-.wiki-toc ol,
-.wiki-toc li,
-.wiki-toc a {
-  font-size: 0.9em !important;
-  line-height: 1.35 !important;
-  letter-spacing: -0.04em !important;
-  text-align: left !important;
+.wiki-toc .toc-line span {
+  color: var(--toc-link, #0275d8);
 }
 
-/* 위계 간격 줄이기 */
-.wiki-toc ol {
-  padding-left: 1.15rem !important;
+.wiki-toc .toc-line:hover {
+  text-decoration: underline;
 }
 
-.wiki-toc ol ol {
-  padding-left: 1.05rem !important;
-  margin-top: 0.05rem !important;
-  margin-bottom: 0.05rem !important;
+.wiki-toc .lv1 {
+  padding-left: 0;
 }
 
-.wiki-toc ol ol ol {
-  padding-left: 0.95rem !important;
+.wiki-toc .lv2 {
+  padding-left: 1.4rem;
 }
 
-.wiki-toc li {
-  margin: 0.12rem 0 !important;
-  padding: 0 !important;
+.wiki-toc .lv3 {
+  padding-left: 2.8rem;
 }
 
 /* 링크 색 */
@@ -514,4 +456,17 @@ article h4 {
 
 .wiki-toc a:hover {
   text-decoration: underline !important;
+}
+
+html,
+body,
+* {
+    font-family:
+        "Pretendard Variable",
+        "Pretendard",
+        "Apple SD Gothic Neo",
+        "Malgun Gothic",
+        "Segoe UI",
+        system-ui,
+        sans-serif !important;
 }
