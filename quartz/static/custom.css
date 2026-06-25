@@ -283,3 +283,60 @@ article h4 {
     margin: 1rem 0;
   }
 }
+
+.wiki-top-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(420px, 520px);
+  gap: 4rem;
+  align-items: start;
+  justify-content: start;
+  margin: 1.5rem 0 2rem;
+}
+
+.wiki-toc-slot {
+  width: 260px;
+}
+
+.wiki-moved-toc {
+  position: static !important;
+  width: 260px !important;
+  max-width: 260px !important;
+  border: 1px solid #ccc;
+  background: transparent !important;
+  padding: 12px 14px;
+  box-sizing: border-box;
+}
+
+.wiki-moved-toc h3,
+.wiki-moved-toc h2,
+.wiki-moved-toc .toc-title {
+  font-size: 1.05rem !important;
+  font-weight: 400 !important;
+}
+
+.wiki-moved-toc a {
+  background: none !important;
+  font-weight: 400 !important;
+  text-decoration: none;
+}
+
+.wiki-profile {
+  width: 520px !important;
+  max-width: 100%;
+  margin: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .wiki-top-layout {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .wiki-toc-slot,
+  .wiki-moved-toc,
+  .wiki-profile {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
