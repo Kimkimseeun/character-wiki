@@ -43,7 +43,6 @@ export default (() => {
       <link rel="stylesheet" href="/static/footnote-popup.css" />
       <link rel="stylesheet" href="/static/custom.css" />
 <script src="/static/footnote-popup.js" defer></script>
-<script src="/static/toc-move.js" defer></script>
         <title>{title}</title>
         <meta charSet="utf-8" />
         {coreStylesheet && <link rel="preload" href={coreStylesheet} as="style" />}
