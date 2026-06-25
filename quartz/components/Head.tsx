@@ -40,6 +40,8 @@ export default (() => {
 
     return (
       <head>
+      <link rel="stylesheet" href="/static/footnote-popup.css" />
+<script src="/static/footnote-popup.js" defer></script>
         <title>{title}</title>
         <meta charSet="utf-8" />
         {coreStylesheet && <link rel="preload" href={coreStylesheet} as="style" />}
