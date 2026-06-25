@@ -470,3 +470,86 @@ body,
         system-ui,
         sans-serif !important;
 }
+
+/* 모바일 확대/가로스크롤 방지 */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+article,
+.page,
+.center,
+.content {
+  max-width: 100%;
+}
+
+/* 페이지별 링크색 공통 변수 */
+.wiki-page {
+  --wiki-link: #0275d8;
+}
+
+/* 분류 링크도 페이지색으로 */
+.wiki-category a {
+  color: var(--wiki-link) !important;
+}
+
+/* 목차: div 방식 */
+.wiki-toc {
+  width: 260px;
+  border: 1px solid #ccc;
+  background: transparent;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+
+.wiki-toc-title {
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.wiki-toc .toc-line {
+  display: block !important;
+  width: 100%;
+  margin: 3px 0;
+  color: var(--dark) !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  background: none !important;
+  box-shadow: none !important;
+  white-space: normal;
+}
+
+.wiki-toc .toc-line span {
+  color: var(--wiki-link) !important;
+}
+
+.wiki-toc .lv1 { padding-left: 0; }
+.wiki-toc .lv2 { padding-left: 1.2rem; }
+.wiki-toc .lv3 { padding-left: 2.4rem; }
+
+.wiki-toc .toc-line:hover {
+  text-decoration: underline !important;
+}
+
+/* 모바일에서는 표/목차가 화면 안에 들어오게 */
+@media (max-width: 700px) {
+  .wiki-top-layout {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+
+  .wiki-toc,
+  .wiki-profile {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .wiki-category {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
