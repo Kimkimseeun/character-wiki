@@ -395,33 +395,40 @@ article h4 {
 
 /* 위키 목차 */
 .wiki-toc {
+  --toc-link: var(--profile-color, #0275d8);
+
   width: 260px;
   border: 1px solid #ccc;
   background: transparent;
   padding: 14px 16px;
   font-size: 14px;
-  line-height: 1.55;
+  line-height: 1.5;
   box-sizing: border-box;
 }
 
 .wiki-toc-title {
-  margin-bottom: 8px;
+  margin: 0 0 8px;
   font-size: 20px;
   font-weight: 400;
+  color: var(--dark);
 }
 
 .wiki-toc ol {
   margin: 0;
-  padding-left: 1.4rem;
+  padding-left: 0.9rem;
+}
+
+.wiki-toc ol ol {
+  padding-left: 1.15rem;
 }
 
 .wiki-toc li {
-  margin: 3px 0;
+  margin: 2px 0;
 }
 
 .wiki-toc a,
 .wiki-toc li::marker {
-  color: #0275d8;
+  color: var(--toc-link) !important;
 }
 
 .wiki-toc a {
