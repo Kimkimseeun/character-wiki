@@ -113,42 +113,52 @@
 }
 
 
-/* 나무위키식 목차 */
+/* 나무위키식 수동 목차 */
 .wiki-toc {
   width: 260px;
   border: 1px solid #ccc;
-  background: #fff;
-  color: #222;
+  background: transparent;
+  color: var(--dark);
   font-size: 14px;
   line-height: 1.55;
+  padding: 14px 16px;
+  box-sizing: border-box;
 }
 
 .wiki-toc-title {
-  padding: 12px 16px;
-  border-bottom: 1px solid #ddd;
-  font-size: 18px;
+  margin: 0 0 10px;
+  padding: 0;
+  border: none !important;
+  font-size: 20px;
   font-weight: 400;
-  color: #222;
+  color: var(--dark);
 }
 
 .wiki-toc ol {
   margin: 0;
-  padding: 12px 16px 14px 34px;
-  list-style-position: outside;
-}
-
-.wiki-toc ol ol {
-  padding: 0 0 0 24px;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: item;
 }
 
 .wiki-toc li {
   margin: 3px 0;
-  color: #222;
+  counter-increment: item;
+  color: var(--dark);
   font-weight: 400;
 }
 
+.wiki-toc li::before {
+  content: counters(item, ".") ". ";
+  color: #0275d8;
+}
+
+.wiki-toc ol ol {
+  margin-left: 1.35rem;
+}
+
 .wiki-toc a {
-  color: #0275d8 !important;
+  color: var(--dark) !important;
   background: none !important;
   padding: 0 !important;
   border: none !important;
@@ -159,7 +169,13 @@
 }
 
 .wiki-toc a:hover {
+  color: #0275d8 !important;
   text-decoration: underline;
+}
+
+/* 목차와 프로필 간격 */
+.wiki-top-layout {
+  gap: 3rem;
 }
 
 
@@ -216,4 +232,40 @@ p.content-meta,
 .wiki-category a,
 .wiki-toc a {
   box-shadow: none !important;
+}
+
+/* 목차 눌렀을 때 너무 위로 붙는 문제 */
+html {
+  scroll-padding-top: 90px;
+}
+
+article h1,
+article h2,
+article h3,
+article h4 {
+  scroll-margin-top: 90px;
+}
+
+/* 자동 목차를 나무위키 처럼 얇게 */
+.toc,
+.table-of-contents {
+  border: 1px solid #ccc;
+  background: transparent;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.toc a,
+.table-of-contents a {
+  color: var(--dark) !important;
+  background: none !important;
+  font-weight: 400 !important;
+  text-decoration: none;
+}
+
+.toc a:hover,
+.table-of-contents a:hover {
+  color: #0275d8 !important;
+  text-decoration: underline;
 }
