@@ -80,55 +80,73 @@
   }
 }
 
+/* 분류표: 얇고 깔끔하게 */
 .wiki-category {
-  margin: 0.8rem 0 1.4rem;
-  padding: 9px 12px;
-  border: 1px solid #d6dce0;
-  border-radius: 4px;
-  background: #fafafa;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  margin: 0.8rem 0 1.2rem;
+  padding: 7px 10px;
+  border: 1px solid #d8dde3;
+  border-radius: 3px;
+  background: transparent;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--dark);
 }
 
 .wiki-category .label {
   color: var(--gray);
-  font-weight: 600;
-  margin-right: 0.25rem;
+  font-weight: 400;
+  margin-right: 0.2rem;
 }
 
 .wiki-category a {
-  font-weight: 600;
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: 400;
   text-decoration: none;
 }
 
 .wiki-category a:not(:last-child)::after {
   content: "|";
-  color: #b5b5b5;
+  color: #b8b8b8;
   margin: 0 0.45rem;
 }
 
+
+/* 목차: 얇고 덜 투박하게 */
 .wiki-toc {
-  width: 220px;
-  margin: 1.2rem 0;
-  padding: 12px 16px;
-  border: 1px solid var(--lightgray);
-  background: var(--light);
-  font-size: 0.92rem;
+  border: 1px solid #d8dde3;
+  background: transparent;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--dark);
 }
 
 .wiki-toc-title {
-  font-weight: 700;
-  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e2e6ea;
+  font-weight: 400;
+  color: var(--dark);
 }
 
 .wiki-toc ol {
   margin: 0;
-  padding-left: 1.3rem;
+  padding: 10px 14px 10px 1.7rem;
 }
 
 .wiki-toc li {
-  margin: 4px 0;
+  margin: 3px 0;
+  font-weight: 400;
 }
+
+.wiki-toc a {
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: 400;
+  text-decoration: none;
+}
+
 
 .wiki-breadcrumb {
   margin: 0.6rem 0 0.9rem;
@@ -141,19 +159,6 @@
 }
 
 .wiki-breadcrumb a {
-  font-weight: 600;
-}
-
-.wiki-category {
-  margin: 0.8rem 0 1.2rem;
-  padding: 8px 10px;
-  border: 1px solid var(--lightgray);
-  border-radius: 3px;
-  background: var(--light);
-  font-size: 0.9rem;
-}
-
-.wiki-category a {
   font-weight: 600;
 }
 
@@ -171,4 +176,29 @@
     display: flex;
     flex-direction: column-reverse;
   }
+}
+
+/* 문서 제목 크게 */
+article h1:first-of-type {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-top: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+/* 날짜/읽기 시간 숨김 */
+.content-meta,
+p.content-meta,
+.article-meta,
+.page-meta {
+  display: none !important;
+}
+
+/* 링크 뒤 배경 제거 */
+.wiki-category mark,
+.wiki-toc mark,
+.wiki-category a,
+.wiki-toc a {
+  box-shadow: none !important;
 }
