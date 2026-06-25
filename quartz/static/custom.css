@@ -602,10 +602,13 @@ article,
   color: #222;
 }
 
-.wiki-heading a {
+.wiki-heading a,
+.wiki-heading .heading-number {
+  opacity: 1 !important;
+  visibility: visible !important;
   color: var(--wiki-link, #0275d8) !important;
-  text-decoration: none;
-  margin-right: 0.35rem;
+  background: none !important;
+  text-decoration: none !important;
 }
 
 .wiki-heading .back-toc {
@@ -614,8 +617,19 @@ article,
   margin-left: 0.35rem;
 }
 
+
+
 .wiki-fold {
   margin-left: 0.4rem;
   color: #555;
   font-size: 0.8em;
 }
+
+.wiki-toc .toc-line {
+  display: block !important;
+}
+
+.wiki-toc .lv1 { padding-left: 0 !important; }
+.wiki-toc .lv2 { padding-left: 1.2rem !important; }
+.wiki-toc .lv3 { padding-left: 2.4rem !important; }
+.wiki-toc .lv4 { padding-left: 3.6rem !important; }
