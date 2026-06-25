@@ -54,15 +54,37 @@
 @media (max-width: 700px) {
   .wiki-footnote-popup {
     position: fixed;
-    left: 14px !important;
-    right: 14px;
-    bottom: 18px;
-    top: auto !important;
+    left: 16px !important;
+    right: 16px;
+    top: 38% !important;
+    bottom: auto !important;
+    transform: translateY(-50%);
     width: auto;
-    max-height: 45vh;
+    max-height: 42vh;
     overflow-y: auto;
+    padding: 18px 18px 0;
+    border-radius: 6px;
   }
-}
-.popover {
-  display: none !important;
+
+  .wiki-footnote-content {
+    padding-right: 0;
+    padding-bottom: 18px;
+  }
+
+  .wiki-footnote-close {
+    position: static;
+    display: block;
+    width: calc(100% + 36px);
+    margin: 14px -18px 0;
+    padding: 13px 0;
+    border-top: 1px solid var(--lightgray);
+    font-size: 0;
+    text-align: center;
+  }
+
+  .wiki-footnote-close::before {
+    content: "닫기";
+    font-size: 0.95rem;
+    color: var(--dark);
+  }
 }
