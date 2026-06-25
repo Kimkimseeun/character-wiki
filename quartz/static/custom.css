@@ -553,3 +553,69 @@ article,
     white-space: nowrap;
   }
 }
+
+.wiki-page-title {
+  font-size: 2.35rem !important;
+  font-weight: 700 !important;
+  color: #222 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1.15;
+  margin: 0.6rem 0 1rem;
+}
+
+.wiki-toc {
+  width: 260px;
+  border: 1px solid #ccc;
+  background: transparent;
+  padding: 14px 16px;
+  box-sizing: border-box;
+}
+
+.wiki-toc-title {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+.wiki-toc .toc-line {
+  display: block !important;
+  margin: 3px 0;
+  color: var(--dark) !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+}
+
+.wiki-toc .toc-line span {
+  color: var(--wiki-link, #0275d8) !important;
+}
+
+.wiki-toc .lv1 { padding-left: 0; }
+.wiki-toc .lv2 { padding-left: 1.1rem; }
+.wiki-toc .lv3 { padding-left: 2.2rem; }
+.wiki-toc .lv4 { padding-left: 3.3rem; }
+
+.wiki-heading {
+  margin: 2rem 0 0.8rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #ccc;
+  font-weight: 700;
+  color: #222;
+}
+
+.wiki-heading a {
+  color: var(--wiki-link, #0275d8) !important;
+  text-decoration: none;
+  margin-right: 0.35rem;
+}
+
+.wiki-heading .back-toc {
+  color: #777 !important;
+  font-size: 0.85em;
+  margin-left: 0.35rem;
+}
+
+.wiki-fold {
+  margin-left: 0.4rem;
+  color: #555;
+  font-size: 0.8em;
+}
