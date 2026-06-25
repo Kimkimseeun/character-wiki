@@ -81,16 +81,30 @@
 }
 
 .wiki-category {
-  margin: 0.8rem 0 1.2rem;
-  padding: 8px 10px;
-  border: 1px solid var(--lightgray);
-  border-radius: 3px;
-  background: var(--light);
+  margin: 0.8rem 0 1.4rem;
+  padding: 9px 12px;
+  border: 1px solid #d6dce0;
+  border-radius: 4px;
+  background: #fafafa;
   font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.wiki-category .label {
+  color: var(--gray);
+  font-weight: 600;
+  margin-right: 0.25rem;
 }
 
 .wiki-category a {
-  font-weight: 500;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.wiki-category a:not(:last-child)::after {
+  content: "|";
+  color: #b5b5b5;
+  margin: 0 0.45rem;
 }
 
 .wiki-toc {
@@ -141,4 +155,20 @@
 
 .wiki-category a {
   font-weight: 600;
+}
+
+.wiki-top-layout {
+  display: grid;
+  grid-template-columns: 240px 430px;
+  gap: 1.6rem;
+  justify-content: space-between;
+  align-items: start;
+  margin: 1.4rem 0 2rem;
+}
+
+@media (max-width: 700px) {
+  .wiki-top-layout {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
