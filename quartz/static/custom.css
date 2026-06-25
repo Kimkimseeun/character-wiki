@@ -1,0 +1,55 @@
+.wiki-profile {
+  width: 420px;
+  max-width: 100%;
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+  border: 1px solid #0d4a43;
+  font-size: 0.95rem;
+}
+
+.wiki-profile th {
+  background: #0d4a43;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  padding: 9px 10px;
+  border: 1px solid #0d4a43;
+}
+
+.wiki-profile td {
+  background: var(--light);
+  color: var(--dark);
+  padding: 9px 12px;
+  border: 1px solid var(--lightgray);
+}
+
+.wiki-profile tr td:first-child,
+.wiki-profile tr th:first-child:not([colspan]) {
+  width: 32%;
+  background: #0d4a43;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+}
+
+.wiki-profile img {
+  width: 100%;
+  display: block;
+  border-radius: 2px;
+}
+
+.wiki-profile a {
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .wiki-profile {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .wiki-profile td,
+  .wiki-profile th {
+    padding: 8px 9px;
+  }
+}

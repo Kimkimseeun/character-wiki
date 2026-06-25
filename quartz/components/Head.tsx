@@ -41,6 +41,7 @@ export default (() => {
     return (
       <head>
       <link rel="stylesheet" href="/static/footnote-popup.css" />
+      <link rel="stylesheet" href="/static/custom.css" />
 <script src="/static/footnote-popup.js" defer></script>
         <title>{title}</title>
         <meta charSet="utf-8" />
