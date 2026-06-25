@@ -445,3 +445,73 @@ article h4 {
 .wiki-toc a:hover {
   text-decoration: underline;
 }
+
+/* 제목 색 더 어둡게 */
+.wiki-page-title {
+  color: #2b2b2b !important;
+  font-size: 3.4rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.06em !important;
+}
+
+/* 목차 전체: 나무위키식으로 더 촘촘하게 */
+.wiki-toc {
+  text-align: left !important;
+  font-stretch: condensed;
+  transform-origin: top left;
+}
+
+.wiki-toc-title {
+  color: #222 !important;
+  font-weight: 400 !important;
+  margin-bottom: 0.45rem !important;
+}
+
+/* 목차 번호/글자 90% 느낌 */
+.wiki-toc ol,
+.wiki-toc li,
+.wiki-toc a {
+  font-size: 0.9em !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.04em !important;
+  text-align: left !important;
+}
+
+/* 위계 간격 줄이기 */
+.wiki-toc ol {
+  padding-left: 1.15rem !important;
+}
+
+.wiki-toc ol ol {
+  padding-left: 1.05rem !important;
+  margin-top: 0.05rem !important;
+  margin-bottom: 0.05rem !important;
+}
+
+.wiki-toc ol ol ol {
+  padding-left: 0.95rem !important;
+}
+
+.wiki-toc li {
+  margin: 0.12rem 0 !important;
+  padding: 0 !important;
+}
+
+/* 링크 색 */
+.wiki-toc a,
+.wiki-toc li::marker {
+  color: var(--toc-link, #0275d8) !important;
+}
+
+/* 글자는 왼쪽으로 강제 */
+.wiki-toc a {
+  display: inline !important;
+  background: none !important;
+  box-shadow: none !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+}
+
+.wiki-toc a:hover {
+  text-decoration: underline !important;
+}
