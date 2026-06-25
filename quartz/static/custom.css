@@ -1,45 +1,71 @@
 .wiki-profile {
-  width: 420px;
+  --profile-color: #0d4a43;
+  --profile-bg: #ffffff;
+  --profile-text: #ffffff;
+  --profile-border: var(--profile-color);
+
+  width: 430px;
   max-width: 100%;
   margin: 1.5rem auto;
   border-collapse: collapse;
-  border: 1px solid #0d4a43;
+  border: 3px solid var(--profile-border);
+  background: var(--profile-bg);
   font-size: 0.95rem;
 }
 
-.wiki-profile th {
-  background: #0d4a43;
-  color: #fff;
-  font-weight: 700;
-  text-align: center;
-  padding: 9px 10px;
-  border: 1px solid #0d4a43;
-}
-
+.wiki-profile th,
 .wiki-profile td {
-  background: var(--light);
-  color: var(--dark);
-  padding: 9px 12px;
   border: 1px solid var(--lightgray);
+  padding: 9px 12px;
 }
 
-.wiki-profile tr td:first-child,
-.wiki-profile tr th:first-child:not([colspan]) {
-  width: 32%;
-  background: #0d4a43;
-  color: #fff;
+.wiki-profile .profile-title th {
+  background: var(--profile-color);
+  color: var(--profile-text);
   text-align: center;
-  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  padding: 12px 10px;
 }
 
-.wiki-profile img {
+.wiki-profile .profile-title small {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.wiki-profile .profile-image td {
+  background: var(--profile-bg);
+  padding: 0;
+  text-align: center;
+}
+
+.wiki-profile .profile-image img {
   width: 100%;
   display: block;
-  border-radius: 2px;
 }
 
-.wiki-profile a {
+.wiki-profile .profile-section th {
+  background: var(--profile-color);
+  color: var(--profile-text);
+  text-align: center;
   font-weight: 700;
+  padding: 8px 10px;
+}
+
+.wiki-profile .profile-label {
+  width: 32%;
+  background: var(--profile-color);
+  color: var(--profile-text);
+  text-align: center;
+  font-weight: 700;
+}
+
+.wiki-profile .profile-value {
+  background: var(--profile-bg);
+  color: var(--dark);
+  text-align: center;
 }
 
 @media (max-width: 700px) {
@@ -48,8 +74,8 @@
     font-size: 0.9rem;
   }
 
-  .wiki-profile td,
-  .wiki-profile th {
+  .wiki-profile th,
+  .wiki-profile td {
     padding: 8px 9px;
   }
 }
