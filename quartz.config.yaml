@@ -68,7 +68,7 @@ plugins:
     enabled: true
     order: 40
   - source: github:quartz-community/table-of-contents
-    enabled: true
+    enabled: false
     order: 50
     layout:
       position: right
@@ -131,7 +131,7 @@ plugins:
       position: left
       priority: 50
   - source: github:quartz-community/graph
-    enabled: true
+    enabled: false
     layout:
       position: right
       priority: 10
@@ -144,7 +144,7 @@ plugins:
       groupOptions:
         grow: true
   - source: github:quartz-community/backlinks
-    enabled: true
+    enabled: false
     layout:
       position: right
       priority: 50
@@ -195,7 +195,7 @@ plugins:
       position: afterBody
       priority: 10
   - source: github:quartz-community/footer
-    enabled: true
+    enabled: false
     options:
       links:
         GitHub: https://github.com/jackyzha0/quartz
@@ -215,7 +215,7 @@ plugins:
     options: {}
     order: 50
   - source: github:quartz-community/note-properties
-    enabled: true
+    enabled: false
     options:
       includeAll: false
       includedProperties:

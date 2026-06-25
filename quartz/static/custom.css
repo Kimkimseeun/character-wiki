@@ -79,3 +79,66 @@
     padding: 8px 9px;
   }
 }
+
+.wiki-category {
+  margin: 0.8rem 0 1.2rem;
+  padding: 8px 10px;
+  border: 1px solid var(--lightgray);
+  border-radius: 3px;
+  background: var(--light);
+  font-size: 0.9rem;
+}
+
+.wiki-category a {
+  font-weight: 500;
+}
+
+.wiki-toc {
+  width: 220px;
+  margin: 1.2rem 0;
+  padding: 12px 16px;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  font-size: 0.92rem;
+}
+
+.wiki-toc-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.wiki-toc ol {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.wiki-toc li {
+  margin: 4px 0;
+}
+
+.wiki-breadcrumb {
+  margin: 0.6rem 0 0.9rem;
+  padding: 8px 10px;
+  border: 1px solid var(--lightgray);
+  border-radius: 3px;
+  background: var(--light);
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.wiki-breadcrumb a {
+  font-weight: 600;
+}
+
+.wiki-category {
+  margin: 0.8rem 0 1.2rem;
+  padding: 8px 10px;
+  border: 1px solid var(--lightgray);
+  border-radius: 3px;
+  background: var(--light);
+  font-size: 0.9rem;
+}
+
+.wiki-category a {
+  font-weight: 600;
+}
